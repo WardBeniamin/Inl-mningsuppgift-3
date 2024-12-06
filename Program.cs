@@ -116,7 +116,7 @@ namespace LibraryManagementAdvanced
             Console.Write("Enter author's country: ");
             string country = Console.ReadLine();
 
-            Author newAuthor = new Author(name, country);
+            Author newAuthor = new Author(id, name, country);
             library.AddAuthor(newAuthor);
             Console.WriteLine("Author added successfully.");
         }

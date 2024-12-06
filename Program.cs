@@ -1,5 +1,7 @@
 ﻿using Bibliotek;
 using System;
+using System.Text.Json.Serialization;
+
 
 namespace LibraryManagementAdvanced
 {
@@ -102,6 +104,12 @@ namespace LibraryManagementAdvanced
 
         static void AddAuthor(Library library)
         {
+            Console.Write("Enter author id: ");
+            if (!int.TryParse(Console.ReadLine(), out int id))
+            {
+                Console.WriteLine("Invalid id.");
+                return;
+            }
             Console.Write("Enter author name: ");
             string name = Console.ReadLine();
 
